@@ -24,7 +24,7 @@ func handleRequest(ctx context.Context, event events.CodePipelineEvent) (string,
 		Region: aws.String("us-east-1"),
 	})
 	if err != nil {
-		log.Println("Failed to create bucket", err)
+		log.Println("Failed to init an AWS session", err)
 		return "error", err
 	}
 
